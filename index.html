@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,600;1,400&family=Mitr:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    * {
+- {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -141,7 +141,7 @@
       outline: none !important;
       box-shadow: none !important;
       -webkit-tap-highlight-color: transparent;
-      filter: drop-shadow(0 4px 12px rgba(255, 105, 180, 0.8));
+      filter: drop-shadow(0 4px 12px rgba(135, 206, 250, 0.8));
     }
 
     @keyframes heartBounce {
@@ -178,8 +178,8 @@
       background-color: rgba(255, 255, 255, 0.9);
       clip-path: path('M115,190 C115,190 20,125 20,65 C20,32 42,15 72,15 C91,15 105,25 115,38 C125,25 139,15 158,15 C188,15 210,32 210,65 C210,125 115,190 115,190 Z');
       position: relative;
-      border: 3px solid #ff69b4;
-      box-shadow: 0 10px 25px rgba(255, 105, 180, 0.5);
+      border: 3px solid #90cdf4;
+      box-shadow: 0 10px 25px rgba(144, 205, 244, 0.5);
     }
 
     .heart-water-fill {
@@ -188,13 +188,13 @@
       left: 0;
       width: 100%;
       height: 0%;
-      background: linear-gradient(0deg, #ff1493, #ff69b4, #ffb6c1);
+      background: linear-gradient(0deg, #63b3ed, #90cdf4, #bee3f8);
       transition: height 0.12s ease-out;
-      box-shadow: 0 -4px 12px rgba(255, 20, 147, 0.6);
+      box-shadow: 0 -4px 12px rgba(99, 179, 237, 0.6);
     }
 
     .fill-instruction {
-      color: #d81159;
+      color: #4299e1;
       font-size: 16px;
       margin-top: 25px;
       font-weight: 600;
@@ -277,14 +277,14 @@
       right: -8px;
       width: 26px;
       height: 26px;
-      background: #ff1493;
+      background: #89cff0;
       color: white;
       border-radius: 50%;
       text-align: center;
       line-height: 26px;
       font-size: 13px;
       font-weight: bold;
-      box-shadow: 0 2px 8px rgba(255, 20, 147, 0.4);
+      box-shadow: 0 2px 8px rgba(137, 207, 240, 0.5);
       cursor: pointer;
       z-index: 10;
       transition: opacity 0.3s ease, transform 0.3s ease;
@@ -381,7 +381,7 @@
       bottom: 25px;
       left: 50%;
       transform: translateX(-50%);
-      background: #ff1493;
+      background: #89cff0;
       color: #ffffff;
       border: none;
       padding: 10px 22px;
@@ -390,13 +390,13 @@
       font-weight: 500;
       cursor: pointer;
       z-index: 400;
-      box-shadow: 0 4px 15px rgba(255, 20, 147, 0.5);
+      box-shadow: 0 4px 15px rgba(137, 207, 240, 0.6);
       transition: transform 0.2s, background-color 0.2s;
     }
 
     .back-to-message-btn:active {
       transform: translateX(-50%) scale(0.95);
-      background: #c70039;
+      background: #63b3ed;
     }
 
     .floating-heart {
@@ -405,7 +405,7 @@
       z-index: 350;
       font-size: 26px;
       animation: floatUp 2.2s ease-out forwards;
-      filter: drop-shadow(0 2px 6px rgba(255, 105, 180, 0.6));
+      filter: drop-shadow(0 2px 6px rgba(135, 206, 250, 0.6));
     }
 
     @keyframes floatUp {
@@ -443,7 +443,7 @@
       <img id="matchImg" src="ไม้ขีด.png" alt="ไม้ขีด">
     </div>
 
-    <div class="bouncing-heart-trigger" id="heartTrigger">💖</div>
+    <div class="bouncing-heart-trigger" id="heartTrigger">🩵</div>
 
     <div class="big-heart-modal" id="heartModal">
       <div class="big-heart-container" id="bigHeartContainer">
@@ -451,7 +451,7 @@
           <div class="heart-water-fill" id="waterFill"></div>
         </div>
       </div>
-      <p class="fill-instruction">แตะหรือกดค้างเพื่อเติมความรัก ✨</p>
+      <p class="fill-instruction">แตะหรือกดค้างเพื่อเติมความรัก💙</p>
     </div>
 
     <div class="polaroid-overlay" id="polaroidOverlay">
@@ -798,7 +798,7 @@
     }, { passive: false });
     window.addEventListener('touchend', stopWatering);
 
-    const pinkHearts = ['💖', '🩷', '💗', '💓', '✨'];
+    const pinkHearts = ['🩵', '🌊', '🏖️', '🏝️', '💙'];
 
     function createFloatingHearts(count = 1, customX = null, customY = null) {
       for (let i = 0; i < count; i++) {
@@ -829,11 +829,11 @@
     }
 
     const polaroidData = [
-      { img: 'photo1.jpg', text: 'เคานต์ดาวน์ปีแรกของเรา ปี 67', top: '10%', left: '12%', rotate: '-7deg', duration: '1.8s', delay: '0s' },
-      { img: 'photo2.jpg', text: 'ไปเที่ยวทะเลด้วยกันครั้งแรก<br>ตอนนั้นที่รักผอมมาก 5555', top: '10%', left: '52%', rotate: '6deg', duration: '2.4s', delay: '0.4s' },
-      { img: 'photo3.jpg', text: 'แต่จริงๆแล้วที่รักหลับก็น่ารักดีนะ<br>เพราะตื่นก็จะบ่นไม่หยุด 555', top: '38%', left: '32%', rotate: '-2deg', duration: '1.6s', delay: '0.2s' },
-      { img: 'photo4.jpg', text: 'เป็นรูปแรกที่ถูกที่รักชม<br>ว่าถ่ายสวยโดยรวม 5555', top: '60%', left: '10%', rotate: '5deg', duration: '2.2s', delay: '0.6s' },
-      { img: 'photo5.jpg', text: 'นานๆที มีรูปคู่<br>ไม่มีอะไรมากรักนะ3000', top: '62%', left: '54%', rotate: '-5deg', duration: '2.0s', delay: '0.3s' }
+      { img: 'photo1.jpg', text: 'เพราะฉัน<br>คิดถึง คิดถึง คิดถึง<br>เธอเหลือเกิน', top: '10%', left: '12%', rotate: '-7deg', duration: '1.8s', delay: '0s' },
+      { img: 'photo2.jpg', text: 'เพราะฉัน<br>คิดถึง คิดถึง คิดถึง<br>เธอเหลือเกิน', top: '10%', left: '52%', rotate: '6deg', duration: '2.4s', delay: '0.4s' },
+      { img: 'photo3.jpg', text: 'เพราะฉัน<br>คิดถึง คิดถึง คิดถึง<br>เธอเหลือเกิน', top: '38%', left: '32%', rotate: '-2deg', duration: '1.6s', delay: '0.2s' },
+      { img: 'photo4.jpg', text: 'เพราะฉัน<br>คิดถึง คิดถึง คิดถึง<br>เธอเหลือเกิน', top: '60%', left: '10%', rotate: '5deg', duration: '2.2s', delay: '0.6s' },
+      { img: 'photo5.jpg', text: 'เพราะฉัน<br>คิดถึง คิดถึง คิดถึง<br>เธอเหลือเกิน', top: '62%', left: '54%', rotate: '-5deg', duration: '2.0s', delay: '0.3s' }
     ];
 
     function showPolaroidsSimultaneously() {
